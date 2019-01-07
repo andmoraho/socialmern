@@ -25,6 +25,8 @@ mongoose
   .then(() => console.log('DB Connected'))
   .catch(error => console.log(error))
 mongoose.set('useCreateIndex', true)
+mongoose.set('useFindAndModify', false)
+mongoose.set('useCreateIndex', true)
 
 // PORT
 const port = process.env.PORT || 5000
