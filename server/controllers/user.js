@@ -8,6 +8,7 @@ const generateToken = require('../utils/generateToken')
 
 // Load Input Validation
 const validateRegisterInput = require('../validation/register')
+const validateLoginInput = require('../validation/login')
 
 // @route POST /api/users/register
 // @desc Register user
@@ -65,6 +66,12 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     const body = _.pick(req.body, ['email', 'password'])
+    const { errors, isValid } = validateLoginInput(body)
+
+    if (!isValid) {
+      return res.status(400).json(errors)
+    }
+
     const userExists = await User.findOne({ email: body.email })
 
     if (!userExists) {
