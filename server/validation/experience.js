@@ -19,7 +19,7 @@ const validateExperienceInput = data => {
   }
 
   if (!validator.isLength(data.company, { min: 2 })) {
-    errors.company = 'Password must at least 2 characters'
+    errors.company = 'Company must be at least 2 characters'
   }
 
   // From
