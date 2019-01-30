@@ -47,7 +47,7 @@ class EditProfile extends Component {
       const profile = nextProps.profile.profile
 
       // Bring skills array to CSV
-      const skillsCSV = profile.skills.join(',')
+      // const skillsCSV = profile.skills.join(',')
 
       // Check if profile field doesn't exixt, make empty string
       profile.company = !isEmpty(profile.company) ? profile.company : ''
