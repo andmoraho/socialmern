@@ -1,9 +1,6 @@
 {
     "name": "socialmern",
     "version": "1.0.0",
-    "engines": {
-        "node": "11.0.0"
-    },
     "description": "Social Network with MERN Stack",
     "main": "index.js",
     "scripts": {
