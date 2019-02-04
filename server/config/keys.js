@@ -1,5 +1,5 @@
-module.exports = {
-  mongodbUri:
-    'mongodb://mernuser:M9qgYM5sSYAZrzDB@ds125684.mlab.com:25684/socialmern',
-  JWT_SECRET: 'rkV66VbsDy6XwAGA8SvS'
+if(process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys_prod')
+} else {
+  module.exports = require('./keys_dev')
 }
